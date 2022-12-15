@@ -1,0 +1,58 @@
+.Keyboard {
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); */
+    gap: .5rem;
+    direction: rtl;
+}
+
+.Keyboard >.btn {
+  font-family: 'Fredoka', sans-serif;
+    width: 100%;
+    background-color: #E99EB0;
+    border-radius: 20%;
+    aspect-ratio: 1 / 1;
+    font-size: 2rem;
+    padding: .2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    border: none;
+    box-shadow: 4px 4px 5px #5495b8;
+  }
+  
+  .Keyboard >.btn.active {
+    background-color: #142b7049;
+    color: #142B70;
+  }
+  
+  .Keyboard > .btn.inactive {
+    opacity: .5;
+  }
+  
+  .Keyboard > .btn:hover:not(:disabled),
+  .Keyboard > .btn:focus:not(:disabled) {
+    box-shadow: 0px 0px ;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .Keyboard {
+      margin-top: 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(1.5rem, 1fr));
+      gap: .5rem;
+      direction: rtl;
+  }
+    
+    .Keyboard >.btn {
+        width: 100%;
+        border-radius: 20%;
+        aspect-ratio: 1 / 1;
+        font-size: 1rem;
+        padding: .2rem;
+        font-weight:normal ;
+        box-shadow: 4px 4px 5px #5495b8;
+      }
+  }
+  

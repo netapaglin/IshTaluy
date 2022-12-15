@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Arimo:wght@400;600&family=Darker+Grotesque&family=Fredoka:wght@300;400&family=Open+Sans:wght@400;500&display=swap');
+.App{
+    
+     position: static;
+    height: 100vh;
+    Width: 80 vw;
+    gap: "2rem";
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 70% auto;
+    justify-items: center;
+    grid-template-areas: "draw word" 
+                         "letters letters";
+}
+
+.App #refresh{
+    background-color: #E99EB0;
+    box-shadow: 4px 4px 5px #5495b8;
+    height: 4%;
+    width: 2.5%;
+    border-radius: 50%;
+    padding: 1%;
+    border: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.App #drawing{
+    grid-area: draw;
+    margin: 3%;
+}
+
+.App #word{
+    margin: 3%;
+    width: 40%;
+    grid-area: word;
+    height: 100%;    
+    padding: 20%;
+}
+.App #keyboard{
+      margin: 3%;
+    grid-area: letters;
+    height: 50%;
+    width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    .App{
+        grid-template-columns: 90%;
+        grid-template-rows: max-content;
+        height: 100%;
+        margin: auto;
+        justify-content: center;
+        grid-template-areas: "draw" 
+                              "word"
+                             "letters";
+    }
+
+    .App #drawing{
+        margin: 5%;
+    }
+
+    .App #word{     
+        padding: 0%;
+        width: 90%;
+        height: max-content;
+    }
+
+    .App #keyboard{
+        height: 50%;
+        width: 100%;
+    }
+
+    .App #refresh{
+             height: 3.5%;
+        width: 8%;
+        padding: 2%;
+    }
+}
